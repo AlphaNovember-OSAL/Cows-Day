@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    cursor: url('../img/cursor.cur'), default;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+
+    animation: sky 9s linear infinite;
+}
+
+.grass {
+    position: relative;
+    top: 75%;
+    height: 25vh;
+    /* background-image: linear-gradient(
+        to bottom,
+        #5bac35 0%, 
+        #008000 100%
+    ); */
+
+    width: 100vw;
+    background-image:  url('../img/grass.png');
+    background-size: auto;
+
+    z-index: 2;
+    animation: brightness 9s linear infinite;
+}
+
+.planet {
+    left: 50%;
+    transform: translate(-50%);
+
+    z-index: 1;
+}
+
+.earth {
+    right: 0;
+    animation: earth 9s linear infinite;
+}
+
+.explosion {
+    right: 0;
+    animation: explosion 9s linear infinite;
+}
+
+.sun {
+    animation: sun 9s linear infinite;
+}
+
+.moon {
+    animation: moon 9s linear infinite;
+}
+
+img {
+    position: absolute;
+    height: 15rem;
+}
+
+.cow {
+    z-index: 2;
+    bottom: 10%;
+    animation: cow 3s linear infinite, brightness 9s linear infinite;
+}
+
+.rocket {
+    animation: rocket 9s linear infinite;
+}
+
+@keyframes moon {
+    0% {
+        bottom: 0%;
+        opacity: 0;
+
+    }
+    66% {
+        bottom: 0%;
+        opacity: 0;
+
+    }
+    66% {
+        opacity: 0;
+
+    }
+    70% {
+        opacity: 1;
+ 
+    }
+    100% {
+        opacity: 1;
+        bottom: 100%;
+ 
+    }
+}
+
+@keyframes earth {
+    0% {
+        opacity: 0.2;
+
+    }
+    50% {
+        opacity: 0.2;
+
+    }
+    60% {
+        opacity: 0.5;
+
+    }
+    65% {
+        opacity: 1;
+
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/*@keyframes explosion {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    90% {
+        opacity: 0;
+        display: none;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+
+@keyframes sun {
+    0% {
+        bottom: 0%;
+        opacity: 0;
+
+    }
+    5% {
+        opacity: 1;
+
+    }
+    33% {
+        bottom: 100%;
+        opacity: 1;
+
+    }
+    100% {
+        bottom: 100%;
+ 
+    }
+}
+
+@keyframes cow {
+    0% {
+        left: -20%;
+    } 
+    100% {
+        left: 100vw;
+ 
+    }    
+}
+
+@keyframes brightness {
+    0% {
+        position: absolute;
+        filter:brightness(10%);
+    }
+    33% {
+        filter:brightness(100%);
+    }
+    66% {
+        filter:brightness(100%);
+    }
+    66% {
+        filter:brightness(10%);
+    }
+    100% {
+        filter:brightness(10%);
+    }
+}
+
+@keyframes sky {
+    0% {
+        background-color: #2364aa;
+    }
+    26% {
+        background-color: #3da5d9;
+    }
+    40% {
+        background-color: #3da5d9;
+    }
+    55% {
+        background-color: #2364aa;
+    }
+    66% {
+        background-color: black;
+    }
+    90% {
+        background-color: black;
+        background-image: url(../img/stars.gif);
+    }
+    100% {
+        background-color: #2364aa;
+    }
+}
+
+@keyframes rocket {
+    0% {
+        position: absolute;
+        transform: translate(-50%);
+        bottom: 0;
+        left: 0;
+        transform: rotate(0);  
+        opacity: 1;      
+    }
+    35% {
+        bottom: 50%;
+        left: 0;
+        transform: rotate(0);     
+        opacity: 1;   
+    }
+    45% {
+        bottom: 75%;
+        left: 10%;
+        transform: rotate(90deg); 
+        opacity: 1;      
+    }
+    70% {
+        bottom: 75%;
+        transform: rotate(90deg);
+        opacity: 1;  
+    }
+    80% {
+        bottom: 75%;
+        left: 70%;
+        transform: rotate(90deg); 
+        opacity: 1;       
+    }
+    90% {
+        bottom: 75%;
+        left: 80%;
+        transform: rotate(90deg);
+        opacity: 1;  
+    }
+    90% {
+        opacity: 0;      
+    }
+    100% {
+        opacity: 0;      
+    }
+
+}
